@@ -1,18 +1,24 @@
 <h3>Orbit Report</h3>
-<table>
-    <tr class="header-row">
-        <th class="sortable">Name</th>
-        <th class="sortable">Type</th>
+<table >
+    <tr class="header-row" >
+        <th class="sortable" (click)="sort('name')">Name</th>
+        <th class="sortable"(click)="sort('type')">Type</th>
         <th>Operational</th>
         <th>Orbit Type</th>
         <th>launch Date</th>
     </tr>
-    <tr *ngFor="let member of satellites">
-        <th>{{member.name}}</th>
-        <th>{{member.type}}</th>
-        <th>{{member.operational}}</th>
-        <th>{{member.orbitType}}</th>
-        <th>{{member.launchDate}}</th>
+   
+    <tr *ngFor="let member of satellites" >
+        <td>{{member.name}}</td>
+        <td class="warning" *ngIf ="member.shouldShowWarning(member.type); else warn">{{member.type}}</td>
+        <ng-template #warn >{{member.type}}</ng-template>
+        <!-- <ng-template #good>{{member.type}}</ng-template> -->
+        <td>{{member.operational}}</td>
+        <td>{{member.orbitType}}</td>
+        <td>{{member.launchDate}}</td>   
+        
+        
     </tr>
+   
     
 </table>
