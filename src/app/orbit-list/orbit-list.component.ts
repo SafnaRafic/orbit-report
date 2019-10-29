@@ -7,6 +7,7 @@ import { Satellite } from '../satellite';
   styleUrls: ['./orbit-list.component.css']
 })
 export class OrbitListComponent implements OnInit {
+  alternateColor: string = 'green';
   
   @Input() satellites: Satellite[];
 
@@ -26,4 +27,13 @@ export class OrbitListComponent implements OnInit {
     });
  }
 
+//  changeColor(member: object): boolean{
+   
+//   if((member)%2 ===0) 
+//   return true;
+//    else
+//    return false;
+   
+
+//  }
 }
