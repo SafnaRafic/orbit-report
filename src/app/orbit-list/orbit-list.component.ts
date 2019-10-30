@@ -27,13 +27,4 @@ export class OrbitListComponent implements OnInit {
     });
  }
 
-//  changeColor(member: object): boolean{
-   
-//   if((member)%2 ===0) 
-//   return true;
-//    else
-//    return false;
-   
-
-//  }
 }

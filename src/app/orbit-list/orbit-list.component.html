@@ -8,16 +8,16 @@
         <th>launch Date</th>
     </tr>
    
-    <tr *ngFor="let member of satellites" >
+    <tr *ngFor="let member of satellites" [style.background-color]="satellites.indexOf(member) % 2 === 0 ? 'green': 'grey'" >
+            
         <td>{{member.name}}</td>
         <td class="warning" *ngIf ="member.shouldShowWarning(member.type); else warn">{{member.type}}</td>
-        <ng-template #warn >{{member.type}}</ng-template>
-        <!-- <ng-template #good>{{member.type}}</ng-template> -->
+        <ng-template #warn >{{member.type}}</ng-template>        
         <td>{{member.operational}}</td>
         <td>{{member.orbitType}}</td>
         <td>{{member.launchDate}}</td>          
-        
+    
     </tr>
    
-    
+
 </table>
