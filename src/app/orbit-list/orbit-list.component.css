@@ -15,6 +15,7 @@ table {
   margin: 12px 0;
   min-width: 300px;
   background: lightsteelblue;
+  margin-left:auto;margin-right:auto;
 }
 
 .header-row {
@@ -32,6 +33,8 @@ th, td {
   } */
   h3{
       color: red;
+      text-align: center;
+      font-size: 30px;
   }
 
 
